@@ -16,20 +16,24 @@ body{
   font-weight: bold;
 }
 .menu-bar ul{
+  /* waxa uu kadhigi joog cml */
   display: inline-flex;
   list-style: none;
   color: #fff;
 
 }
 .menu-bar ul li{
+  /* home ve digerler uzakliklari */
   width: 120px;
   margin: 15px;
   padding: 15px;
 }
 .menu-bar ul li a{
+  /* hoosta ayuu kaxariiqi */
   text-decoration: none;
   color: #fff;
 }
+/* home activ yapmak icin */
 /*
 .active, .menu-bar ul li a:hover
 {
@@ -39,10 +43,12 @@ body{
 }
 */
 .sub-menu-1{
+  /* sub-menu alt alt getirmek icin */
   display: none;
 }
 .menu-bar ul li:hover .sub-menu-1
 {
+  /* displaying sub-menu */
   display: block;
   position: absolute;
   background-color: rgba(107, 107,107);
@@ -68,13 +74,15 @@ body{
 }
 .menu-bar ul li:hover .sub-menu-1 ul li a:hover
 {
-  color: red;
+  /* color: red; */
+  color: green;
 }
 .sub-menu-2{
   display: none;
 }
 .hover-me:hover .sub-menu-2
 {
+  /* waa home ka sawirada //homedeki icerik duzenliyor */
   position: absolute;
   display: block;
   margin-top: -40px;
@@ -112,6 +120,8 @@ section{
  margin: 50px 0px 0px 50px
 }
 
+
+/*
 section .panel{
     height: 100vh;
     display: flex;
@@ -183,7 +193,7 @@ section .evaluate{
 section .next{
     color: white;
     background-color: #BF3325;
-}
+} */
 
 
 section .math{
@@ -239,6 +249,7 @@ section .styled:active {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
                 inset 2px 2px 3px rgba(0, 0, 0, .6);
 }
+/* for exam css */
 section .question{
   font-weight: 600;
 }
@@ -248,19 +259,57 @@ section .answers {
 section #submit{
   font-family: sans-serif;
   font-size: 20px;
-  background-color: #297;
+  /* background-color: #297; */
   color: #fff;
   border: 0px;
   border-radius: 3px;
   padding: 20px;
   cursor: pointer;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 section #submit:hover{
   background-color: #3a8;
 }
-h1,h2{
+/* h1,h2{
   text-align: center;
   color: back;
+} */
+input.answer{
+    text-align: center;
 }
 /* js Omid */
+section .board{
+
+  width: 200px;
+  min-height: 70px;
+  /* min-width: 200px; */
+  background-color:#b8c6db;
+  /* background-color:#DAF7A6; */
+  /* position:fixed; */
+  position: absolute;
+  margin-top: 90px;
+  margin-right: 0px;
+  right: 10px;
+  top:10px;
+    /* background: url(body-bg.jpg) no-repeat; */
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7f7 100%);
+  border: 10px;
+  border-radius: 10px;
+  border-color: read;
+  text-align: center;
+}
+section .board p{
+  display:inline;
+
+
+  /* background-color: #C0C0C0; */
+
+  margin-left: 15px;
+  padding-right: 5px;
+  padding-right: 5px;
+}
+section #time{
+  margin-top: 30px;
+  text-align:center;
+}

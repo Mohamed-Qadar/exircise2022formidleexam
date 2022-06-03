@@ -1,10 +1,9 @@
 var time_id = document.getElementById('time');
-var secounds = 30;
+var secounds = 3000;
 t_int = setInterval(timer,1000);
 function timer(){
   if(secounds <=0){
-    alert("your time is finished",quiz.innerHTML = ` <h2 style ="color: green";>${quizData.length} sorudan ${score} soruya cevap veridiniz</h2>`);
-     loadQuiz();
+    alert("your time is finished");
     time.id.innerHTML == "sure: doldu";
   }
   else {
@@ -22,71 +21,70 @@ function timer(){
 }
 const quizData = [
     {
-        question:"Acording to Simple Present Tense Formula, I _______ the sum.",
-        a: "solve",
-        b: " solves",
-        c: "had solved",
-        d: " solved",
+        question:"the sum of these numbers 3+7 is.",
+        a: 37,
+        b: 73,
+        c: 21,
+        d: 10,
 
         correct: "d",
     },
-
     {
-        question: "We sometimes",
-        a: "read",
-        b: "reads",
-        c: "reading",
-        d: "none of this",
+        question: "product of these numbers 3x7 is ",
+        a: 21,
+        b: 73,
+        c: 21,
+        d: 10,
+        correct: "a",
+    },
+    {
+        question: "subtraction of these numbers 7-3 is",
+        a: 3,
+        b: -4,
+        c: 10,
+        d: 4,
         correct: "d",
     },
     {
-        question: "i haven't________my seatbelt yet",
-        a: "dressed",
-        b: "tied",
-        c: "locked",
-        d: "fastened",
-        correct: "d",
-    },
-    {
-        question: "You're_______to  make me cry",
-        a: "thinking",
-        b: "round",
-        c: "about",
-        d: "planned",
-        correct: "d",
+        question: "additin of these numbers 90+10 is",
+        a: 9010,
+        b: 80,
+        c: 100,
+        d: 90+10,
+        correct: "c",
     },
       {
-        question: "Will you______it for me?",
-        a: "give it",
-        b: "handle",
-        c: "take care",
-        d: "go",
+        question: "additin of these numbers 15+15 is",
+        a: 1515,
+        b: 30,
+        c: 0,
+        d: 31,
         correct: "b",
     },
         {
-        question: "You cought me_____surprise last night. ",
-        a: "on",
-        b: "with",
-        c: "for",
-        d: "by",
+        question: "what is the result of these numbers 81/9 ",
+        a: 8,
+        b: 7,
+        c: 8.6,
+        d: 9,
         correct: "d",
     },
     {
-          question: "There_____plenty of fish in the sea. ",
-        a: "is",
-        b: "are",
-        c: "be",
-        d: "was",
-        correct: "d",
+          question: "what is the result of these numbers √81",
+          a: 8.9,
+          b: 9,
+          c: 8.6,
+          d: 9.5,
+        correct: "b",
     },
     {
 
-          question: "I think they_____enjoyed the movie. ",
-        a: "rarely",
-        b: "thoroughly",
-        c: "very",
-        d: "real",
-        correct: "d",
+          question: "what is the result of these numbers √49 ",
+          a: 8.9,
+          b: 7,
+          c: 8.6,
+          d: 9.5,
+        correct: "b",
     },
 
 
@@ -103,14 +101,14 @@ const d_text = document.getElementById('d_text')
 const submitBtn = document.getElementById('submit')
 
 
-let currentQuiz = 0
-let score = 0
+let currentQuiz = 0;
+let score = 0;
 
-loadQuiz()
+loadQuiz();
 
 function loadQuiz() {
 
-    // deselectAnswers()
+    deselectAnswers();
 
     const currentQuizData = quizData[currentQuiz]
 
@@ -122,7 +120,8 @@ function loadQuiz() {
 }
 
 function deselectAnswers() {
-    answerEls.forEach(answerEl => answerEl.checked = false)
+    // answerEls.forEach(answerEl => answerEl.checked = false);
+    answerEls.forEach(answerEl => answerEl.checked = false);
 }
 
 function getSelected() {
@@ -150,15 +149,7 @@ submitBtn.addEventListener('click', () => {
        } else {
            quiz.innerHTML = `
            <h2>You answered ${score}/${quizData.length} questions correctly</h2>
-           <button style="font-family: sans-serif;  font-size: 20px;  background-color: #ffc300;
-             color: #fff;
-             border: 0px;
-             border-radius: 3px;
-             padding: 20px;
-             cursor: pointer;
-             margin-top: 10px;
-             color:#123456;
-             margin-bottom: 20px;"; onclick="location.reload()">Reload</button>
+           <button onclick="location.reload()">Reload</button>
            `
        }
     }
