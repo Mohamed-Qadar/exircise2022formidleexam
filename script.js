@@ -23,7 +23,7 @@ function control(qn,ans){
   document.getElementById('point').innerHTML = "puan:"+point;
 }
 var time_id = document.getElementById('time');
-var secounds = 300;
+var secounds = 600;
 t_int = setInterval(timer,1000);
 function timer(){
   if(secounds <=0){
